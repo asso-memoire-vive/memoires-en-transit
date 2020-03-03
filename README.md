@@ -1,6 +1,16 @@
 # MEMOIRES EN TRANSIT
 
+
+Le projet de cartographier des mémoires éparses et multiples.
+Qu'ont ces lieux à nous dire ?
+https://github.com/fullstackreact/google-maps-react
+
+https://webkid.io/blog/making-maps-with-react/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+
 
 ## Available Scripts
 

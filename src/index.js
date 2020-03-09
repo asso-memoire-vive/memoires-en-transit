@@ -4,18 +4,24 @@ import './index.css'
 import * as serviceWorker from './serviceWorker'
 import {BrowserRouter} from "react-router-dom"
 import {Route} from "react-router"
-import Header from "./Header/Header"
-import Home from "./Home/Home"
-import GeoJsonMap from "./Map/GsonMap"
+import Header from "./components/Header/Header"
+import GeoJsonMap from "./components/Map/GsonMap"
 
 ReactDOM.render(
-    <BrowserRouter>
-        <div className="app">
-            <Header />
-            <Route exact path="/" component={Home} />
-            <Route path="/carte" component={GeoJsonMap} />
-        </div>
-    </BrowserRouter>,
+  <BrowserRouter>
+    <div className="app">
+      <Header />
+      <Route
+        component={GeoJsonMap}
+        exact
+        path="/"
+      />
+      <Route
+        component={GeoJsonMap}
+        path="/carte"
+      />
+    </div>
+  </BrowserRouter>,
     document.getElementById('root')
 )
 

@@ -20,7 +20,11 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^24.9.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

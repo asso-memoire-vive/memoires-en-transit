@@ -24,13 +24,15 @@
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",
+    "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^24.9.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
     "start-server": "node server/app.js",
+    "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

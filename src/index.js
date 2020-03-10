@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
-import {BrowserRouter} from "react-router-dom"
-import {Route} from "react-router"
+import { BrowserRouter } from "react-router-dom"
+import { Route } from "react-router"
 import Header from "./components/Header/Header"
 import GeoJsonMap from "./components/Map/GsonMap"
 

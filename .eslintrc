@@ -35,17 +35,6 @@
     "react/static-property-placement": "off",
     "semi": ["error", "never"]
   },
-  "overrides": [
-    {
-      "rules": {
-        "jest/expect-expect": "off",
-        "jest/lowercase-name": "off",
-        "jest/no-test-callback": "off",
-        "jest/prefer-expect-assertions": "off",
-        "jest/require-top-level-describe": "off"
-      }
-    }
-  ],
   "settings": {
     "import/resolver": {
       "node": {

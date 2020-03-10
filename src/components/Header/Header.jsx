@@ -7,11 +7,11 @@ function Header() {
       <header className="header">
         <BrowserRouter>
           <Link
-            className="header__claim"
+            className="header_link"
             to="/carte"
           >
             <FaGlobeEurope />
-            <span className="header__title">
+            <span className="header_title_link">
                 Making Maps With Reacts
             </span>
           </Link>

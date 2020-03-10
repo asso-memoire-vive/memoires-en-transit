@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@turf/random": "^6.0.2",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "geojson-world-map": "^0.0.2",
     "immutable": "^4.0.0-rc.12",
@@ -23,11 +24,13 @@
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",
+    "dotenv": "^8.2.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^24.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-server": "node server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

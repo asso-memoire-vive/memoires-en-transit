@@ -17,7 +17,6 @@ const pointerIcon = new L.Icon({
   shadowAnchor: [20, 92],
 })
 
-
 class GeoJsonMap extends React.Component {
     render() {
         const LeafletMarkers = markers.map(marker => {

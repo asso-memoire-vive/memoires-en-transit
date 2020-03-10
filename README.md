@@ -12,6 +12,11 @@ Qui marche https://medium.com/@eugenebelkovich/map-for-react-apps-with-leaflet-3
 
 Ex avec appel api https://development-tools.net/blog/how-to-create-maps-with-react-and-leaflet/
 
+
+Credit
+
+<div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,15 +1,29 @@
 import React from 'react'
 import {Map as LeafletMap, GeoJSON, Marker, Popup, TileLayer} from 'react-leaflet'
-import {markers, mapConfig} from './helpers'
+import {markers, mapConfig, stamenTonerTiles, stamenTonerAttr} from './helpers'
 import worldGeoJSON from "../../data/worldGeoJson"
+import L from 'leaflet'
 
 const geoJSONFeatureFlipping = false
+
+const pointerIcon = new L.Icon({
+  iconUrl: 'suitcaseIcon.svg',
+  iconRetinaUrl: 'suitcaseIcon.svg',
+  iconAnchor: [5, 55],
+  popupAnchor: [10, -44],
+  iconSize: [25, 55],
+  shadowUrl: 'marker-shadow.png',
+  shadowSize: [68, 95],
+  shadowAnchor: [20, 92],
+})
+
 
 class GeoJsonMap extends React.Component {
     render() {
         const LeafletMarkers = markers.map(marker => {
           return (
             <Marker
+              icon={pointerIcon}
               key={`marker_${marker.name}`}
               position={marker.latlng}
             >
@@ -56,8 +70,8 @@ class GeoJsonMap extends React.Component {
                 :
               {
                 <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+                  attribution={stamenTonerAttr}
+                  url={stamenTonerTiles}
                 />
               
             }

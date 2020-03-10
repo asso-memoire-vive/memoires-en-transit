@@ -14,7 +14,7 @@ code {
 }
 
 .leaflet-container {
-  height: 400px;
+  height: 500px;
   width: 1000px;
 }
 
@@ -25,5 +25,4 @@ code {
 }
 
 .leaflet-marker-shadow {
-  background-color: darkred;
 }

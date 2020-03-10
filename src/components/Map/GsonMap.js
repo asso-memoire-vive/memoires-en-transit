@@ -1,8 +1,11 @@
 import React from 'react'
 import {Map as LeafletMap, GeoJSON, Marker, Popup, TileLayer} from 'react-leaflet'
-import {markers, mapConfig, stamenTonerTiles, stamenTonerAttr} from './helpers'
+import {mapConfig, stamenTonerTiles, stamenTonerAttr} from './helpers'
 import worldGeoJSON from "../../data/worldGeoJson"
 import L from 'leaflet'
+import axios from 'axios'
+
+import {API_URL} from "../../config"
 
 const geoJSONFeatureFlipping = false
 
@@ -16,9 +19,23 @@ const pointerIcon = new L.Icon({
   shadowSize: [68, 95],
   shadowAnchor: [20, 92],
 })
-
 class GeoJsonMap extends React.Component {
-    render() {
+
+  constructor(props) {
+    super(props)
+    this.state = { markers: [] }
+  }
+
+  componentDidMount() {
+    axios.get(API_URL)
+      .then(response => {
+        const markers = response.data
+        this.setState({ markers })
+      })
+  }
+
+  render() {
+        const { markers } = this.state
         const LeafletMarkers = markers.map(marker => {
           return (
             <Marker
@@ -77,7 +94,6 @@ class GeoJsonMap extends React.Component {
               { LeafletMarkers }
             </LeafletMap>
           </div>
-
         )
     }
 }

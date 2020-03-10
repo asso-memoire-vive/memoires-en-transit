@@ -1,3 +1,5 @@
+const CLIENT_URL = process.env.API_URL || 'http://localhost:3000'
+
 const express = require('express')
 const app = express()
 const port = 5000
@@ -15,7 +17,15 @@ const markers = [
   }
 ]
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", CLIENT_URL)
+  //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next()
+})
 
-app.get('/', (req, res) => res.status(200).send(markers))
+
+app.get('/', (req, res) => {
+  return res.status(200).send(markers)
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

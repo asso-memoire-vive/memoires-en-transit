@@ -4,8 +4,8 @@ import {mapConfig, stamenTonerTiles, stamenTonerAttr} from './helpers'
 import worldGeoJSON from "../../data/worldGeoJson"
 import L from 'leaflet'
 import axios from 'axios'
-
 import {API_URL} from "../../config"
+import TimeLine from "../TimeLine/TimeLine";
 
 const geoJSONFeatureFlipping = false
 
@@ -19,6 +19,35 @@ const pointerIcon = new L.Icon({
   shadowSize: [68, 95],
   shadowAnchor: [20, 92],
 })
+
+const dates = [
+  {
+    start: 601257600,
+    end: 957139200
+  },
+  {
+    start: 957139200,
+    end: 1217980800
+  },
+  {
+    start: 601257600,
+    end: 957139200
+  },
+  {
+    start: 1217980800,
+    end: 1219980800
+  }
+
+]
+
+const logChange = (data) => {
+  console.log("Min timestamp: " + data.minCursorTimestamp);
+  console.log("Max timestamp: " + data.maxCursorTimestamp);
+  console.log("Min year: " + data.minCursorDate);
+  console.log("Max year: " + data.maxCursorDate);
+}
+
+
 class GeoJsonMap extends React.Component {
 
   constructor(props) {
@@ -93,6 +122,10 @@ class GeoJsonMap extends React.Component {
             }
               { LeafletMarkers }
             </LeafletMap>
+            <TimeLine
+              dates={dates}
+              onChange={this.logChange}
+            />
           </div>
         )
     }

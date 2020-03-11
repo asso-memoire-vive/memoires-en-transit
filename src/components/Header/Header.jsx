@@ -8,7 +8,7 @@ function Header() {
         <BrowserRouter>
           <Link
             className="header_link"
-            to="/carte"
+            to="/"
           >
             <FaGlobeEurope />
             <span className="header_title_link">

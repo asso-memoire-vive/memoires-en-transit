@@ -17,6 +17,13 @@ Credit
 
 <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
 
+## TO DO
+
+"start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+"start-client": "react-scripts start",
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

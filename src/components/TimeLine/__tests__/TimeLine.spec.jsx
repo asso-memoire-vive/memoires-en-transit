@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import { TimeLine } from '../TimeLine'
 
-describe('TimeLine', () => {
+describe('timeLine', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       // given
@@ -26,10 +26,8 @@ describe('TimeLine', () => {
             end: 1219980800
           }
 
-        ];
+        ]
       }
-
-
 
       // when
       const wrapper = shallow(

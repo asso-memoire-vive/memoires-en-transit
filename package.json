@@ -6,14 +6,12 @@
     "node": "12.16.0"
   },
   "dependencies": {
-    "@turf/random": "^6.0.2",
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
     "express": "^4.17.1",
     "geojson-world-map": "^0.0.2",
     "immutable": "^4.0.0-rc.12",
     "leaflet": "^1.6.0",
-    "material-ui": "^0.20.2",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
@@ -25,10 +23,16 @@
     "react-scripts": "^3.1.1"
   },
   "devDependencies": {
+    "add": "^2.0.6",
     "babel-eslint": "10.0.3",
     "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-15": "^1.4.1",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint-plugin-jest": "^23.8.2",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.13.0",
+    "yarn": "^1.22.4"
   },
   "scripts": {
     "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
@@ -36,7 +40,8 @@
     "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rm -rf node_modules && yarn cache clean"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -13,12 +13,7 @@ ReactDOM.render(
       <Header />
       <Route
         component={GeoJsonMap}
-        exact
         path="/"
-      />
-      <Route
-        component={GeoJsonMap}
-        path="/carte"
       />
     </div>
   </BrowserRouter>,

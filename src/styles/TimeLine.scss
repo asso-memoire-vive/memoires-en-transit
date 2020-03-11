@@ -10,6 +10,24 @@ $timeline_cursor_font_color: #fff !default;
 
 /* TIMELESS STYLES */
 
+.example-controls {
+  margin-top: 15px;
+}
+
+button {
+  background: #2895D4;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  color: white;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #29a3e3;
+}
+
 .timeline-wrapper {
   line-height: 1;
   width: 100%;

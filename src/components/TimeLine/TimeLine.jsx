@@ -6,6 +6,8 @@ export class TimeLine extends PureComponent {
     constructor() {
         super()
         this.state = {
+            delay: null,
+            disabled: false,
             minCursorX: 0,
             maxCursorX: 0,
             minCursorDate: 0,
@@ -14,17 +16,17 @@ export class TimeLine extends PureComponent {
     }
 
     componentWillMount() {
-        this._getMinMaxDates();
-        this._addListeners();
-        this.delay = null;
+        this._getMinMaxDates()
+        this._addListeners()
+        //this.delay = null
     }
 
     componentWillUnmount() {
-        this._removeListeners();
+        this._removeListeners()
     }
 
     componentDidMount() {
-        this._setWindowVars();
+        this._setWindowVars()
     }
 
     updateCursors(data) {
@@ -85,7 +87,9 @@ export class TimeLine extends PureComponent {
     }
 
     _getMinMaxDates() {
-        const dates = this.props.dates;
+        // TODO Remove from component did mount
+        const dates = this.props.dates
+        //
         const {minTimestamp, maxTimestamp} = this.props;
 
         let minTime;
@@ -144,12 +148,14 @@ export class TimeLine extends PureComponent {
         return html;
     }
 
-    _handleMouseUp()
-    {
+    _handleMouseUp = () => {
+        this._handleDrag = this._handleDrag.bind(this)
         window.removeEventListener('mousemove', this._handleDrag, true);
     }
 
-    _handleMouseDown(cursor, event){
+    _handleMouseDown = (cursor, event) => {
+        this._handleDrag = this._handleDrag.bind(this)
+
         this.setState(
           {
               animate: false,
@@ -161,7 +167,7 @@ export class TimeLine extends PureComponent {
         )
     }
 
-    _handleResize() {
+    _handleResize = () => {
         this._setWindowVars();
     }
 
@@ -175,7 +181,9 @@ export class TimeLine extends PureComponent {
         window.removeEventListener('resize', this._handleResize, false);
     }
 
-    _setWindowVars() {
+
+
+    _setWindowVars = () => {
         const time = this.state.maxTime - this.state.minTime + 1;
         const wrapperSize = this.timelineWrapper.offsetWidth;
         const wrapperOffsetLeft = this.timelineWrapper.offsetLeft;
@@ -265,6 +273,8 @@ export class TimeLine extends PureComponent {
         const clientX = event.clientX - this.state.wrapperOffsetLeft;
         const activeCursorOffsetClient = year === this.state.maxTime ? - this.props.cursorWidth : this.props.cursorWidth / 2;
 
+
+        this._handleDrag = this._handleDrag.bind(this)
         this.setState({
             activeCursor,
             activeCursorOffsetClient,
@@ -288,6 +298,22 @@ export class TimeLine extends PureComponent {
 
         return dateX;
     }
+
+  _toggleDisable = () => {
+    const disabled = !this.state.disabled;
+
+    this.setState({
+      disabled
+    })
+  }
+
+  _reset = () =>{
+    this.updateCursors({
+      minCursorDefaultTimestamp: 601257600,
+      maxCursorDefaultTimestamp: 917980800,
+    });
+  }
+
 
     render() {
         const minCursorStyle = {
@@ -325,6 +351,7 @@ export class TimeLine extends PureComponent {
         if (this.props.disabled) timelineWrapperClass += ' timeline--disabled';
 
         return (
+          <div>
             <div className={timelineWrapperClass} ref={(ref) => this.timelineWrapper = ref}>
                 <div className="timeline-available">
                     {this._getAvailableYearsHtml(this.state.minTime, this.state.maxTime)}
@@ -344,15 +371,21 @@ export class TimeLine extends PureComponent {
                      onTouchStart={this._handleMouseDown.bind(this, 'max')}
                     >{this.state.maxCursorLabel}</div>
             </div>
+            <div className="example-controls">
+                <button type="button" onClick={this._toggleDisable}>disable</button>
+                <button type="button" onClick={this._reset}>reset</button>
+            </div>
+          </div>
         )
-
-
     }
 }
 
 
 TimeLine.defaultProps = {
-    dates: [],
+    dates: [{
+        start: 601257600,
+        end: 957139200
+    }],
     onChange: null,
     onChangeDelay: 0,
     cursorWidth: 75,
@@ -369,7 +402,7 @@ TimeLine.defaultProps = {
 }
 
 TimeLine.propTypes = {
-    dates: PropTypes.func,
+    dates: PropTypes.array,
     onChange: PropTypes.func,
     onChangeDelay: PropTypes.number,
     cursorWidth: PropTypes.number,

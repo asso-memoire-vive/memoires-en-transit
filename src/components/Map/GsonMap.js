@@ -37,22 +37,13 @@ const dates = [
     start: 1217980800,
     end: 1219980800
   }
-
 ]
-
-const logChange = (data) => {
-  console.log("Min timestamp: " + data.minCursorTimestamp);
-  console.log("Max timestamp: " + data.maxCursorTimestamp);
-  console.log("Min year: " + data.minCursorDate);
-  console.log("Max year: " + data.maxCursorDate);
-}
-
 
 class GeoJsonMap extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = { markers: [] }
+    this.state = { markers: [], disabled: false }
   }
 
   componentDidMount() {
@@ -122,10 +113,17 @@ class GeoJsonMap extends React.Component {
             }
               { LeafletMarkers }
             </LeafletMap>
-            <TimeLine
-              dates={dates}
-              onChange={this.logChange}
-            />
+            <div>
+              <TimeLine
+                dates={dates}
+                minTimestamp={601257600}
+                maxTimestamp={1217980800}
+                minCursorDefaultTimestamp={601257600}
+                maxCursorDefaultTimestamp={917980800}
+                onChangeDelay={250}
+                disabled={this.state.disabled}
+              />
+            </div>
           </div>
         )
     }

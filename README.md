@@ -17,6 +17,7 @@ Credits
 
 <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
 Favicon : https://www.iconsdb.com/orange-icons/speaker-icon.html
+Source for Icon http://icon-park.com/icon/simple-location-map-pin-icon5-yellow-free-vector-data/
 
 ## TO DO
 

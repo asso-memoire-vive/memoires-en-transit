@@ -1,7 +1,7 @@
 // source : https://codepen.io/Ratko_Solaja/pen/ztxkw/
 import React from 'react'
 
-function TimeLine2() {
+function Frise() {
   return (
     <div>
       <section id="conference-timeline">
@@ -83,4 +83,4 @@ function TimeLine2() {
   )
 }
 
-export default TimeLine2
+export default Frise

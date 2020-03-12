@@ -4,7 +4,7 @@ import './index.scss'
 import * as serviceWorker from './serviceWorker'
 import {BrowserRouter} from "react-router-dom"
 import {Route} from "react-router"
-import TimeLine2 from "./components/TimeLine/TimeLine2"
+import Frise from "./components/TimeLine/Frise"
 import Apropos from "./components/Apropos"
 import App from "./components/App"
 import MapContainer from "./components/MapContainer";
@@ -17,7 +17,7 @@ ReactDOM.render(
     />
     {/* add the routes here */}
     <Route
-      component={TimeLine2}
+      component={Frise}
       path="/timeline"
     />
     <Route

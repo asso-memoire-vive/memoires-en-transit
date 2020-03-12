@@ -9,12 +9,12 @@ import L from 'leaflet'
 const geoJSONFeatureFlipping = false
 
 const pointerIcon = new L.Icon({
-  iconUrl: 'suitcaseIcon.svg',
-  iconRetinaUrl: 'suitcaseIcon.svg',
+  iconUrl: 'marker-icon-yellow.svg',
+  iconRetinaUrl: 'marker-icon-yellow.svg',
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [25, 55],
-  shadowUrl: 'marker-shadow.png',
+  //shadowUrl: 'marker-shadow.png',
   shadowSize: [68, 95],
   shadowAnchor: [20, 92],
 })

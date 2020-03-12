@@ -1,31 +1,29 @@
 // VARIABLES
 
-$timeline_bg_color: #F6F6F6 !default;
-$timeline_range_bg_color: #8DC3E4 !default;
-$timeline_cursor_bg_color: #2895D4 !default;
+//$timeline_bg_color: #F6F6F6 !default;
+$timeline_bg_color: #9a9898 !default;
+$timeline_range_bg_color: #ffeba5 !default;
+$timeline_cursor_bg_color: #fdc809 !default;
 
 $timeline_font_color: #ccc !default;
-$timeline_range_font_color: #fff !default;
-$timeline_cursor_font_color: #fff !default;
+$timeline_range_font_color: #000 !default;
+$timeline_cursor_font_color: #000 !default;
 
 /* TIMELESS STYLES */
 
-.example-controls {
-  margin-top: 15px;
+.frise-container {
+  display: flex;
+  flex-direction: row
 }
 
 button {
-  background: #2895D4;
+  background: $timeline_cursor_bg_color;
   border: none;
-  border-radius: 3px;
-  padding: 10px 15px;
-  color: white;
-  margin-right: 5px;
-  cursor: pointer;
+  height: 100%;
 }
 
 button:hover {
-  background: #29a3e3;
+  background: $timeline_range_bg_color;
 }
 
 .timeline-wrapper {

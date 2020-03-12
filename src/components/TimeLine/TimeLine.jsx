@@ -323,14 +323,6 @@ export class TimeLine extends PureComponent {
     return dateX
   }
 
-  _toggleDisable = () => {
-    const disabled = !this.state.disabled
-
-    this.setState({
-      disabled
-    })
-  }
-
   _reset = () => {
     this.updateCursors({
       minCursorDefaultTimestamp: 601257600,
@@ -377,7 +369,7 @@ export class TimeLine extends PureComponent {
     if (disabled) timelineWrapperClass += ' timeline--disabled'
 
     return (
-      <div>
+      <div className="frise-container">
         <div 
           className={timelineWrapperClass}
           ref={(ref) => this.timelineWrapper = ref}
@@ -408,18 +400,13 @@ export class TimeLine extends PureComponent {
             {this.state.maxCursorLabel}
           </div>
         </div>
+
         <div className="example-controls">
-          <button
-            onClick={this._toggleDisable}
-            type="button"
-          >
-disable
-          </button>
           <button
             onClick={this._reset}
             type="button"
           >
-reset
+            {'Réinitisaliser'}
           </button>
         </div>
       </div>

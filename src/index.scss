@@ -1,5 +1,5 @@
 @import 'styles/TimeLine.scss';
-@import 'styles/TimeLine2.scss';
+@import 'styles/Frise';
 @import 'styles/app-container.scss';
 @import 'styles/header.scss';
 @import 'styles/menu.scss';
@@ -19,5 +19,5 @@ code {
 
 .leaflet-container {
   height: 500px;
-  width: 1000px;
+  width: 100%;
 }

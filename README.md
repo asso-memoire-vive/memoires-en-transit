@@ -13,14 +13,19 @@ Qui marche https://medium.com/@eugenebelkovich/map-for-react-apps-with-leaflet-3
 Ex avec appel api https://development-tools.net/blog/how-to-create-maps-with-react-and-leaflet/
 
 
-Credit
+Credits
 
 <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+Favicon : https://www.iconsdb.com/orange-icons/speaker-icon.html
 
 ## TO DO
 
+### Server
 "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
 "start-client": "react-scripts start",
+
+### add TimeLine
+https://bashooka.com/coding/react-libraries-to-visualize-timelines/
 
 
 

@@ -1,29 +1,29 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import { FaGlobeEurope } from 'react-icons/fa'
+import {FaGlobeEurope} from 'react-icons/fa'
 
 function Menu() {
   return (
-    <div>
+    <div className="menu">
       <Link
-        className="header_link"
+        className="menu_link"
         to="/"
       >
-        <FaGlobeEurope />
-        <span className="header_title_link">
-          {'Making Maps With Reacts'}
-        </span>
+        <FaGlobeEurope/>
+        {'Making Maps With Reacts'}
       </Link>
       <Link
-        className="header_link"
+        className="menu_link"
         to="/timeline"
       >
-        <span
-          className="header_title_link"
-        >
-          {'TimeLine'}
-        </span>
-      </Link> 
+        {'TimeLine'}
+      </Link>
+      <Link
+        className="menu_link"
+        to="/apropos"
+      >
+        {'Apropos'}
+      </Link>
     </div>
   )
 }

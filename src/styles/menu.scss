@@ -1,0 +1,12 @@
+$WHITE: white;
+
+.menu {
+  background-color: dimgrey;
+
+  a.menu_link {
+    color: $WHITE;
+    margin-left: 20px;
+    padding-bottom: 20px;
+
+  }
+}

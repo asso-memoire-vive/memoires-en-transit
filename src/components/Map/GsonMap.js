@@ -5,7 +5,7 @@ import worldGeoJSON from "../../data/worldGeoJson"
 import L from 'leaflet'
 //import axios from 'axios'
 //import {API_URL} from "../../config"
-import TimeLine from "../TimeLine/TimeLine";
+import TimeLine from "../TimeLine/TimeLine"
 
 const geoJSONFeatureFlipping = false
 

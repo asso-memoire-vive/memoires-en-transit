@@ -2,11 +2,24 @@ $WHITE: white;
 
 .menu {
   background-color: dimgrey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 
   a.menu_link {
     color: $WHITE;
     margin-left: 20px;
-    padding-bottom: 20px;
+  }
 
+  a:active {
+    color: deeppink;
+  }
+
+  a:link {
+    text-decoration: none;
   }
 }
+

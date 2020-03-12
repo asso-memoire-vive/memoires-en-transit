@@ -5,7 +5,6 @@ import worldGeoJSON from "../../data/worldGeoJson"
 import L from 'leaflet'
 //import axios from 'axios'
 //import {API_URL} from "../../config"
-import TimeLine from "../TimeLine/TimeLine"
 
 const geoJSONFeatureFlipping = false
 
@@ -51,7 +50,6 @@ class GeoJsonMap extends React.Component {
 
   render() {
         //const { markers } = this.state
-    const { disabled } = this.state
         const LeafletMarkers = markers.map(marker => {
           return (
             <Marker
@@ -109,17 +107,6 @@ class GeoJsonMap extends React.Component {
             }
               { LeafletMarkers }
             </LeafletMap>
-            <div>
-              <TimeLine
-                //dates={dates}
-                disabled={disabled}
-                maxCursorDefaultTimestamp={917980800}
-                maxTimestamp={1217980800}
-                minCursorDefaultTimestamp={601257600}
-                minTimestamp={601257600}
-                onChangeDelay={250}
-              />
-            </div>
           </div>
         )
     }

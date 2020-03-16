@@ -3,8 +3,8 @@ import {Map as LeafletMap, GeoJSON, Marker, Popup, TileLayer} from 'react-leafle
 import {mapConfig, stamenTonerTiles, stamenTonerAttr} from './helpers'
 import worldGeoJSON from "../../data/worldGeoJson"
 import L from 'leaflet'
-//import axios from 'axios'
-//import {API_URL} from "../../config"
+import axios from 'axios'
+import {API_URL} from "../../config"
 
 const geoJSONFeatureFlipping = false
 
@@ -19,37 +19,23 @@ const pointerIcon = new L.Icon({
   shadowAnchor: [20, 92],
 })
 
-const markers = [
-  {
-    name: "Gare d'Austerlitz",
-    latlng: [48.8417, 2.3661]
-  }, {
-    name: 'Gare de Hendaye',
-    latlng: [43.3530587, -1.7818216]
-  }, {
-    name: 'Paris',
-    latlng: [48.8387131, 2.4843213]
-  }
-]
-
 class GeoJsonMap extends React.Component {
 
   constructor(props) {
     super(props)
-    //this.state = { markers: [], disabled: false }
-    this.state = { disabled: false }
+    this.state = { markers: [], disabled: false }
   }
 
-  // componentDidMount() {
-  //   axios.get(API_URL)
-  //     .then(response => {
-  //       const markers = response.data
-  //       this.setState({ markers })
-  //     })
-  // }
+  componentDidMount() {
+    axios.get(API_URL)
+      .then(response => {
+        const markers = response.data
+        this.setState({ markers })
+      })
+  }
 
   render() {
-        //const { markers } = this.state
+        const { markers } = this.state
         const LeafletMarkers = markers.map(marker => {
           return (
             <Marker

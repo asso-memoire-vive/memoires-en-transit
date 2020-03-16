@@ -35,8 +35,9 @@
     "yarn": "^1.22.4"
   },
   "scripts": {
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
     "start-server": "node server/app.js",
-    "start": "react-scripts --max_old_space_size=4096 start",
+    "start-client": "react-scripts --max_old_space_size=4096 start",
     "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

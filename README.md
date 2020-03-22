@@ -17,7 +17,7 @@ Credits
 
 <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
 Favicon : https://www.iconsdb.com/orange-icons/speaker-icon.html
-Source for Icon http://icon-park.com/icon/simple-location-map-pin-icon5-yellow-free-vector-data/
+Source for Icon http://icon-park.com/icon/simple-location-map-pin-icon5-yellow-free-vector-data/  
 
 ## TO DO
 
@@ -27,6 +27,20 @@ Source for Icon http://icon-park.com/icon/simple-location-map-pin-icon5-yellow-f
 
 ### add TimeLine
 https://bashooka.com/coding/react-libraries-to-visualize-timelines/
+- Top avec des carrés https://github.com/onejgordon/react-life-timeline
+
+
+
+## ADD Postgres
+https://www.taniarascia.com/node-express-postgresql-heroku/
+
+## Add CRUD
+https://developer.okta.com/blog/2018/07/10/build-a-basic-crud-app-with-node-and-react
+
+## Quitter Heroku ?
+https://www.taniarascia.com/continuous-integration-pipeline-docker/
+
+
 
 
 

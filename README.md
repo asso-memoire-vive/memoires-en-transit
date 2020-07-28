@@ -42,8 +42,6 @@ https://www.taniarascia.com/continuous-integration-pipeline-docker/
 
 
 
-
-
 ## Available Scripts
 
 In the project directory, you can run:

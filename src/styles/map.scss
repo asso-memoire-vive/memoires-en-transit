@@ -1,0 +1,17 @@
+.map-container {
+  width: 100%;
+  height: 100%;
+
+  .map-container-timeline {
+
+  }
+
+  .map-container-map{
+    //height: 100%;
+
+    .leaflet-container {
+      background-color: black;
+      height: 600px;
+    }
+  }
+}

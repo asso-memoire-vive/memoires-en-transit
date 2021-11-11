@@ -4,7 +4,7 @@ import Menu from "./Menu";
 
 function Layout({ title, children }) {
   return (
-    <div>
+    <div className='layout'>
       <header>
         <h1>{title}</h1>
       </header>

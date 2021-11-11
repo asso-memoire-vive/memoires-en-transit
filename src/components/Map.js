@@ -1,6 +1,6 @@
 import React from 'react'
 import GeoJsonMap from './Map/GsonMap'
-import TimeLine from './TimeLine/TimeLine'
+import TimeLine from './TimeLine'
 import Layout from "./Layout";
 
 class Map extends React.Component {

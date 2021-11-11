@@ -1,6 +1,6 @@
 // source : https://codepen.io/Ratko_Solaja/pen/ztxkw/
 import React from 'react'
-import Layout from "../Layout";
+import Layout from "./Layout";
 
 function Frise() {
   return (

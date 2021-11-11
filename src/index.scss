@@ -3,6 +3,7 @@
 @import 'styles/app-container.scss';
 @import 'styles/header.scss';
 @import 'styles/menu.scss';
+@import 'styles/layout.scss';
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,9 +16,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace
-}
-
-.leaflet-container {
-  height: 500px;
-  width: 100%;
 }

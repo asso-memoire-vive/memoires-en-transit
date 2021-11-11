@@ -1,9 +1,11 @@
 // source : https://codepen.io/Ratko_Solaja/pen/ztxkw/
 import React from 'react'
+import Layout from "../Layout";
 
 function Frise() {
   return (
-    <div>
+    <Layout>
+      <div>
       <section id="conference-timeline">
         <div className="timeline-start">Start</div>
         <div className="conference-center-line"></div>
@@ -80,6 +82,7 @@ function Frise() {
         <div className="timeline-end">End</div>
       </section>
     </div>
+    </Layout>
   )
 }
 

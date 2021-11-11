@@ -1,0 +1,5 @@
+// avoid margin fusion hack
+.main {
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+}

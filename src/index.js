@@ -1,38 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from "react-dom";
+import App from "./components/App";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.scss'
-import * as serviceWorker from './serviceWorker'
-import {BrowserRouter} from "react-router-dom"
-import {Route} from "react-router"
-import Frise from "./components/TimeLine/Frise"
-import Apropos from "./components/Apropos"
-import App from "./components/App"
 import MapContainer from "./components/MapContainer";
+import Apropos from "./components/Apropos";
+import Frise from "./components/TimeLine/Frise";
 
-ReactDOM.render(
-  <BrowserRouter >
-    <Route
-      component={App}
-      path="/"
-    />
-    {/* add the routes here */}
-    <Route
-      component={Frise}
-      path="/timeline"
-    />
-    <Route
-      component={Apropos}
-      path="/apropos"
-    />
-    <Route
-      component={MapContainer}
-      path="/carte"
-    />
+const rootElement = document.getElementById("root");
+render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/carte" element={<MapContainer />} />
+      <Route path="/apropos" element={<Apropos />} />
+      <Route path="/timeline" element={<Frise />} />
+    </Routes>
   </BrowserRouter>,
-  document.getElementById('root')
-)
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister()
+  rootElement
+);

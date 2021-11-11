@@ -1,5 +1,5 @@
 import React from 'react'
-import {Map as LeafletMap, GeoJSON, Marker, Popup, TileLayer} from 'react-leaflet'
+import {MapContainer as LeafletMap, GeoJSON, Marker, Popup, TileLayer} from 'react-leaflet'
 import {mapConfig, stamenTonerTiles, stamenTonerAttr} from './helpers'
 import worldGeoJSON from "../../data/worldGeoJson"
 import L from 'leaflet'
